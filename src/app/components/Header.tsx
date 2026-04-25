@@ -69,13 +69,24 @@ export function Header() {
           {/* Logo & Status */}
           <div className="flex items-center gap-6">
             <a href="#" className="flex items-center gap-3 group no-underline">
-              <div className="w-10 h-10 border-2 border-border flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 border-2 border-border flex items-center justify-center overflow-hidden relative">
+                {/* Mobile / No-hover Logo */}
+                <img 
+                  src="/assets/logo_og.webp" 
+                  alt="Quad Rugby Chile Logo" 
+                  className="w-full h-full object-cover md:hidden block"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = '<span class="text-foreground font-display font-bold text-xl">QR</span>';
+                  }}
+                />
+                
+                {/* Desktop / Hover Logo */}
                 <img 
                   src="/assets/logo.webp" 
                   alt="Quad Rugby Chile Logo" 
-                  className="w-full h-full object-cover transition-all duration-300 dark:brightness-0 dark:invert brightness-0 group-hover:brightness-100 group-hover:invert-0 dark:group-hover:brightness-100 dark:group-hover:invert-0"
+                  className="w-full h-full object-cover hidden md:block transition-all duration-300 dark:brightness-0 dark:invert brightness-0 group-hover:brightness-100 group-hover:invert-0 dark:group-hover:brightness-100 dark:group-hover:invert-0"
                   onError={(e) => {
-                    // Fallback if image not found
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = '<span class="text-foreground font-display font-bold text-xl">QR</span>';
                   }}

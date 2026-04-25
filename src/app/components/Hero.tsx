@@ -38,12 +38,15 @@ export function Hero() {
       <div className="relative z-10 w-full max-w-[var(--container-max)] mx-auto px-[var(--edge-safe)] text-center md:text-right pt-16 pb-24 md:grid md:grid-cols-12 gap-8 items-center">
         
         {/* Empty State / Balance Placeholder (Hidden on mobile) */}
-        <div className="hidden md:flex md:col-span-4 lg:col-span-5 items-center justify-center opacity-30">
-          <div className="relative w-48 h-48 border-[3px] border-white flex items-center justify-center chamfer-card">
-            <div className="absolute inset-0 technical-grid"></div>
-            <div className="absolute w-full h-[3px] bg-white"></div>
-            <div className="absolute h-full w-[3px] bg-white"></div>
-            <span className="absolute bottom-2 right-2 technical-label text-white bg-black px-1">IMG.01_PENDING</span>
+        <div className="hidden md:flex md:col-span-4 lg:col-span-5 items-center justify-center opacity-40">
+          <div className="relative w-64 h-64 border-[3px] border-white/20 flex items-center justify-center chamfer-card p-4 group">
+            <img 
+              src="/assets/Field-of-Play.webp" 
+              alt="Esquema del campo de juego" 
+              className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute top-2 right-2 technical-label text-[8px] text-white/40 tracking-widest">MAP.REF_001</div>
+            <div className="absolute inset-0 scanlines opacity-10"></div>
           </div>
         </div>
 
