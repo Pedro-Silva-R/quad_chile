@@ -1,0 +1,97 @@
+Actúa como Diseñador Frontend + UI/UX de élite. Crea el frontend completo (código) de la página **Inicio** para el sitio “Quad Rugby Chile”, incluyendo un **design system** reutilizable (tokens CSS, componentes base, layout responsive, a11y y rendimiento). Entrega el código idealmente en **3 archivos**: `index.html`, `styles.css`, `main.js` (sin frameworks, sin dependencias de build). Textos en **lorem ipsum** (reemplazables), pero la estructura y jerarquía deben quedar exactas.
+
+Requisitos no negociables (calidad UI/UX):
+- Visual premium, con carácter (evitar estética genérica “tarjetas blancas + sombra suave + gradiente azul típico”). Propón una dirección de arte distintiva y consistente.
+- Mobile-first, 100% responsive con CSS Grid/Flex y tipografía fluida (`clamp()`); evitar anchos fijos.
+- Accesibilidad WCAG AA: HTML semántico, foco visible, navegación por teclado, `aria-label` cuando corresponda, `prefers-reduced-motion` respetado, contraste correcto.
+- Rendimiento (WPO): evitar CLS; todo media con tamaños definidos cuando aplique. El hero es video, así que usa `poster` y `preload="metadata"`. No uses lazy para el contenido crítico del hero.
+- Preparado para “chunking” (GEO/AEO): encabezados secuenciales correctos (un solo H1). Si agregas FAQs, usa `<details>/<summary>`.
+
+Brand / identidad:
+- Paleta base: **blanco, azul, metal (gris frío), rojo, negro**. Implementa como variables CSS.
+- Propón tipografías con personalidad (NO Inter/Roboto). Usa 2 familias: display (impacto) + UI/texto (legible). Cárgalas vía Google Fonts con `display=swap`.
+- Modo claro como default + **toggle de modo oscuro** (conmutador visible en header). Persistir preferencia en `localStorage` y respetar `prefers-color-scheme` si no hay preferencia guardada.
+- Logo provisorio: usa un “wordmark” textual + un isotipo simple en CSS (placeholder). Deja el hook para reemplazar por imagen real luego.
+
+Estructura de la página (Inicio) — debe quedar implementada tal cual:
+
+1) Header global (sticky)
+- Logo “Quad Rugby Chile”
+- Nav: Inicio, El Deporte, Participa, Contacto (pueden apuntar a `#` anclas por ahora, pero deja preparados los `href` para futuras páginas: `/el-deporte.html`, `/participa.html`, `/contacto.html` sin romper el layout)
+- Botón CTA principal: “Participa”
+- Toggle tema (claro/oscuro)
+- Menú mobile tipo drawer accesible (botón con `aria-expanded`, `aria-controls`)
+
+2) Hero (H1)
+- Fondo: video autoplay muted loop playsinline a pantalla completa con overlay para legibilidad
+- H1 potente + subtítulo breve (lorem)
+- CTAs: “Conocer el deporte” (ancla a sección 3) y “Participa” (ancla o link futuro)
+- Indicador de scroll sutil
+
+1) Sección: “Qué es el rugby en silla de ruedas” (H2)
+- 1 párrafo breve (lorem) que explique el deporte
+- 4 tarjetas (H3 dentro de cada tarjeta):
+  a) Velocidad
+  b) Contacto
+  c) Sistema técnico (clasificación 0.5–3.5 / máximo 8 puntos)
+  d) Nivel internacional
+- Bajo las tarjetas: links claros a páginas futuras:
+  - “Ver reglas” → `/reglas.html`
+  - “Entender clasificación” → `/clasificacion.html`
+
+4) Actividad reciente (Noticias + calendario liviano) (H2)
+- Lista/timeline de 3–6 ítems con: categoría, fecha, titular, resumen corto
+- Primer ítem puede estar marcado como “Próximo”
+- Botón “Ver más novedades” (por ahora solo UI; sin backend)
+
+5) Equipo (teaser) (H2)
+- Sub-bloques:
+  - “Jugadores destacados” (grid de cards)
+  - “Staff” (grid de cards)
+- Cada card: nombre (lorem), rol, ciudad (lorem), y un tag/insignia
+- CTA: “Quiero sumarme”
+
+6) Participa (teaser por rol) (H2)
+- 4 cards: Atleta, Voluntario, Árbitro, Clasificador
+- Copy corto (lorem)
+- CTA único: “Ir a Participa”
+
+7) Clubes y actividades por región (placeholder útil) (H2)
+- Mensaje honesto (lorem reemplazable) indicando que se está levantando información
+- UI con 2 caminos:
+  - Botón/acción “Hay actividad en mi región”
+  - Formulario “Avísenme cuando haya actividad cerca” con:
+    - Selector región (Chile) o input ciudad (puede ser select simple placeholder)
+    - Email o WhatsApp
+    - Checkbox consentimiento (texto placeholder)
+    - Submit con estado loading y éxito (solo UI)
+
+8) Redes y multimedia (H2)
+- Grid de 6–9 thumbnails (placeholders con `<img>` usando `width`/`height`)
+- Links a redes (Instagram/YouTube) como botones secundarios
+
+9) Footer global (componente)
+- Columnas: Navegación, Redes, Contacto breve (placeholders)
+- Bloque FEDERUPA discreto:
+  - “Respaldo FEDERUPA” + logo placeholder pequeño
+  - Misión y Visión (2 líneas cortas, lorem)
+- Nota legal simple (copyright)
+
+Design system (en `styles.css`):
+- CSS variables: colores (light/dark), tipografías, escala de espacios, radios, bordes, sombras (no suaves genéricas), z-index, anchos máximos, gradientes/texturas sutiles (grain opcional).
+- Componentes base: botones (primary/secondary/ghost), badges, cards, section headers, timeline item, form fields, nav drawer, theme toggle.
+- Estados `:hover`, `:focus-visible` impecables.
+- Animaciones sutiles (solo si no reduce-motion) para entrada de secciones y microinteracciones.
+
+JS mínimo (en `main.js`):
+- Toggle tema con `localStorage`
+- Menú mobile (abrir/cerrar, trap focus básico o cierre con ESC)
+- Smooth scroll a anclas (opcional), sin librerías
+- Form UI: validación ligera (required) + estados (loading/success) sin enviar a backend
+
+Assets:
+- Hero video referenciar como `assets/hero.mp4` y poster `assets/hero-poster.jpg` (placeholders). El código debe funcionar aunque esos archivos no existan aún (degradar con fondo sólido/gradiente).
+
+Entrega:
+- Código completo y listo para pegar/usar.
+- Incluye al inicio un “Design Rationale” de máximo 3 líneas explicando la dirección estética escogida.

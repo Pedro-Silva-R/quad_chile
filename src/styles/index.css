@@ -1,0 +1,34 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+@layer base {
+  /* Technical Cursor */
+  body {
+    cursor: crosshair;
+  }
+
+  a, button, [role="button"], input, select, textarea {
+    cursor: pointer;
+  }
+
+  /* Brutalist Scrollbar */
+  ::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+    border-left: 3px solid var(--border);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border: 3px solid var(--background);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+}
