@@ -149,12 +149,12 @@ export function Footer() {
             © {currentYear} Quad Rugby Chile
           </p>
           
-          <div className="flex items-center gap-3 bg-white/5 px-4 py-2 border border-white/10 chamfer-cut-tl group hover:border-primary transition-colors">
+          <div className="flex items-center align-center justify-center gap-3 bg-white/5 px-4 py-2 border border-white/10 chamfer-cut-tl group hover:border-primary transition-colors">
             <span className="technical-label text-white/40 text-[9px] tracking-widest">Hecho por</span>
             <span className="text-white font-bold text-xs tracking-tighter group-hover:text-primary transition-colors">NexoWeb</span>
-            <div className="w-5 h-5 bg-primary/20 border border-primary/40 flex items-center justify-center overflow-hidden">
+            <div className="w-5 h-5 flex items-center align-center justify-center overflow-hidden">
               <img 
-                src="/assets/nexoweb-logo.png" 
+                src="/assets/nexoweb-logo.webp" 
                 alt="NexoWeb Logo" 
                 className="w-full h-full object-contain"
                 onError={(e) => {

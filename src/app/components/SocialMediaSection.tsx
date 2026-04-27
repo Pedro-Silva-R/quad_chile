@@ -48,9 +48,9 @@ export function SocialMediaSection() {
       <div className="max-w-[var(--container-max)] mx-auto px-[var(--edge-safe)] relative z-10">
         
         <div className="text-center md:text-right mb-12 md:mb-20">
-          <div className="inline-flex items-center gap-2 mb-4 border-b-2 border-accent pb-2">
-            <Instagram className="w-5 h-5 text-accent" />
-            <span className="technical-label text-accent tracking-widest uppercase">INTEL_STREAM // INSTAGRAM</span>
+          <div className="inline-flex items-center gap-2 mb-4 border-b-2 border-primary pb-2">
+            <Instagram className="w-5 h-5 text-primary" />
+            <span className="technical-label text-primary tracking-widest uppercase">INTEL_STREAM // INSTAGRAM</span>
           </div>
           <h2 className="text-foreground mb-4 uppercase tracking-tighter">Redes y Multimedia</h2>
           <p className="text-[var(--on-surface-muted)] text-lg max-w-xl mx-auto md:mr-0 font-medium">

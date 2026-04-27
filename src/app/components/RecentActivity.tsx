@@ -38,11 +38,22 @@ export function RecentActivity() {
       <div className="absolute inset-0 scanlines opacity-50 pointer-events-none"></div>
       <div className="relative max-w-[var(--container-max)] mx-auto px-[var(--edge-safe)] z-10">
         <div className="text-center md:text-right mb-12 md:grid md:grid-cols-12 gap-8 items-center">
-          {/* Empty State / Balance Placeholder (Hidden on mobile) */}
-          <div className="hidden md:flex md:col-span-4 lg:col-span-5 items-center justify-center opacity-30">
-            <div className="relative w-full h-32 border-[3px] border-border flex items-center justify-center chamfer-card">
-              <div className="absolute inset-0 technical-grid"></div>
-              <span className="technical-label text-foreground">IMG.03_PENDING</span>
+          <div className="hidden md:flex md:col-span-4 lg:col-span-5 items-center justify-center">
+            <div className="relative w-full aspect-[16/9] border-[3px] border-border overflow-hidden chamfer-card shadow-[var(--shadow-hard-sm)] group -rotate-2 transition-transform hover:rotate-0 duration-300">
+              <img 
+                src="/assets/team.webp" 
+                alt="Equipo Quad Rugby Chile" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 scanlines opacity-20 pointer-events-none"></div>
+              
+              {/* Technical Overlay */}
+              <div className="absolute top-0 left-0 bg-primary text-white px-2 py-1">
+                <span className="technical-label !text-[10px]">TEAM_SYNC</span>
+              </div>
+              <div className="absolute bottom-4 right-4 bg-background/90 backdrop-blur-sm border-2 border-border p-2">
+                <span className="technical-label text-foreground">ACT.REF // 003</span>
+              </div>
             </div>
           </div>
 

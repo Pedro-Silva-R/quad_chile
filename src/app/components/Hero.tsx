@@ -13,7 +13,7 @@ export function Hero() {
           preload="auto"
           className="w-full h-full object-cover"
         >
-          <source src="/assets/murderball2.mp4" type="video/mp4" />
+          <source src="/assets/murderball.mp4" type="video/mp4" />
         </video>
 
         {/* Functional overlay for legibility - solid dark */}
@@ -86,17 +86,17 @@ export function Hero() {
       {/* Technical Ticker (Anchored to bottom) */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden bg-[var(--brand-black)] text-[var(--brand-white)] py-2 border-t-[3px] border-border z-20">
         <div className="whitespace-nowrap animate-[marquee_20s_linear_infinite] flex gap-8">
-          <span className="technical-label">SYS.STATUS: OPTIMAL</span>
+          <span className="technical-label">ESTADO.SISTEMA: ÓPTIMO</span>
           <span className="technical-label text-primary">///</span>
-          <span className="technical-label">KINETIC ENERGY: 100%</span>
+          <span className="technical-label">MODO: COMPETICIÓN</span>
           <span className="technical-label text-primary">///</span>
-          <span className="technical-label">IMPACT RATING: MAXIMUM</span>
+          <span className="technical-label">NIVEL DE IMPACTO: MÁXIMO</span>
           <span className="technical-label text-primary">///</span>
-          <span className="technical-label">SYS.STATUS: OPTIMAL</span>
+          <span className="technical-label">ESTADO.SISTEMA: ÓPTIMO</span>
           <span className="technical-label text-primary">///</span>
-          <span className="technical-label">KINETIC ENERGY: 100%</span>
+          <span className="technical-label">MODO: COMPETICIÓN</span>
           <span className="technical-label text-primary">///</span>
-          <span className="technical-label">IMPACT RATING: MAXIMUM</span>
+          <span className="technical-label">NIVEL DE IMPACTO: MÁXIMO</span>
         </div>
       </div>
     </section>

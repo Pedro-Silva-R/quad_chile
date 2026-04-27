@@ -60,7 +60,7 @@ export function ParticipateSection() {
               
               {/* Technical Overlay */}
               <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-2 py-1">
-                <span className="technical-label !text-[10px]">RECRUIT_MODE_ON</span>
+                <span className="technical-label !text-[10px]">MODO_RECLUTAMIENTO_ACTIVO</span>
               </div>
               <div className="absolute bottom-4 left-4 bg-background/90 backdrop-blur-sm border-2 border-border p-2">
                 <span className="technical-label text-foreground">PRT.SYS // 0.5-3.5</span>
@@ -143,11 +143,11 @@ export function ParticipateSection() {
         {/* Call to Action Terminal Style */}
         <div className="relative max-w-4xl mx-auto">
           <div className="absolute -inset-1 bg-gradient-to-r from-primary via-[var(--brand-red)] to-accent blur opacity-30"></div>
-          <div className="relative bg-[var(--brand-black)] border-[3px] border-border p-2 md:p-4 chamfer-cut-br shadow-[var(--shadow-hard)] flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="relative bg-[var(--brand-black)] border-[3px] border-border p-2 md:p-4 chamfer-cut-br shadow-[var(--shadow-offset)_var(--shadow-offset)_0_var(--brand-blue)] flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex-1 px-4 md:px-8 py-4 w-full">
               <span className="technical-label text-primary mb-2 flex items-center gap-2"><span className="w-2 h-2 bg-primary rounded-full animate-ping"></span> ACCESO HABILITADO</span>
               <p className="text-white text-xl md:text-2xl font-black uppercase tracking-wide">
-                Iniciar protocolo de ingreso oficial
+                Únete a la familia del Quad Rugby
               </p>
             </div>
             
@@ -155,7 +155,7 @@ export function ParticipateSection() {
               href="/participa.html"
               className="group w-full md:w-auto inline-flex items-center justify-center px-10 py-6 bg-primary text-primary-foreground font-black text-xl tracking-widest uppercase transition-all hover:bg-white hover:text-primary active:scale-95 chamfer-cut-tl whitespace-nowrap border-[3px] border-transparent hover:border-primary"
             >
-              EJECUTAR <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" />
+              UNIRME AHORA <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" />
             </a>
           </div>
         </div>

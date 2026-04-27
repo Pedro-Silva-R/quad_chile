@@ -113,6 +113,9 @@
   --card: var(--surface);
   --card-foreground: var(--on-surface);
   --secondary-foreground: var(--brand-black);
+
+  /* Fix native select dropdown in dark mode */
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -255,6 +258,18 @@
     font-weight: 450;
     line-height: 1.5;
     min-height: 44px;
+  }
+
+  /* Fix native select dropdown in dark mode */
+  .dark select {
+    color-scheme: dark;
+    background-color: var(--surface);
+    color: var(--foreground);
+  }
+
+  .dark select option {
+    background-color: var(--surface);
+    color: var(--foreground);
   }
 
   /* Technical labels (will be applied via class) */

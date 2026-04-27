@@ -78,6 +78,28 @@ export function ClubsSection() {
                 <p className="text-[var(--on-surface-muted)] text-sm leading-relaxed font-medium">
                   Estamos monitoreando el interés a lo largo del país para priorizar el desarrollo de nuevos polos deportivos. Regístrate en nuestro radar.
                 </p>
+
+                {/* Imagen del Radar / Mapa */}
+                <div className="relative mt-8 w-full aspect-[4/3] border-[3px] border-border overflow-hidden chamfer-card bg-background group/map">
+                  <img 
+                    src="/assets/radar-map.webp" 
+                    alt="Mapa de monitoreo nacional" 
+                    className="w-full h-full object-cover opacity-60 group-hover/map:opacity-100 group-hover/map:scale-110 transition-all duration-700"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.parentElement?.classList.add('flex', 'items-center', 'justify-center', 'bg-border/5');
+                      const span = document.createElement('span');
+                      span.className = 'technical-label text-[10px] opacity-30';
+                      span.innerText = 'DATA_SYNC_PENDING';
+                      e.currentTarget.parentElement?.appendChild(span);
+                    }}
+                  />
+                  <div className="absolute inset-0 scanlines opacity-30 pointer-events-none"></div>
+                  <div className="absolute top-2 right-2 flex gap-1">
+                    <span className="technical-label text-[8px] text-primary/60 mr-1">SCAN_V.02</span>
+                    <div className="w-1.5 h-1.5 bg-primary animate-pulse"></div>
+                  </div>
+                </div>
               </div>
 
               <div className="relative z-10">
@@ -88,7 +110,7 @@ export function ClubsSection() {
             {/* Panel Derecho: Formulario */}
             <div className="w-full md:w-3/5 p-8 md:p-10 bg-card relative">
               <div className="mb-8">
-                <span className="technical-label px-2 py-1 bg-[var(--brand-metal)] text-white border-[3px] border-border inline-block mb-4">NOTIFICACIÓN</span>
+                <span className="technical-label px-2 py-1 bg-[var(--brand-red)] text-white border-[3px] border-border inline-block mb-4">NOTIFICACIÓN</span>
                 <h3 className="text-foreground mb-2 text-xl font-bold">Avísenme cuando haya actividad</h3>
               </div>
 
@@ -190,7 +212,7 @@ export function ClubsSection() {
                     <button
                       type="submit"
                       disabled={isLoading}
-                      className="w-full px-8 py-4 bg-foreground text-background border-[3px] border-border shadow-[var(--shadow-hard-sm)] font-black uppercase tracking-widest transition-transform hover:-translate-x-1 hover:-translate-y-1 active:translate-x-0 active:translate-y-0 active:shadow-none disabled:opacity-50 flex items-center justify-center gap-3 chamfer-cut-br"
+                      className="w-full px-8 py-4 bg-foreground text-background border-[3px] border-border shadow-[6px_6px_0_var(--brand-blue)] font-black uppercase tracking-widest transition-transform hover:-translate-x-1 hover:-translate-y-1 active:translate-x-0 active:translate-y-0 active:shadow-none disabled:opacity-50 flex items-center justify-center gap-3 chamfer-cut-br"
                     >
                       {isLoading ? (
                         <>

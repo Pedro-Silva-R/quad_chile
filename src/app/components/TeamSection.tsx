@@ -80,7 +80,7 @@ export function TeamSection() {
         <div className="text-center md:text-left mb-16 md:grid md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-8">
             <div className="inline-flex items-center gap-2 mb-4 border-l-4 border-[var(--brand-metal)] pl-3">
-            <span className="technical-label text-[var(--brand-metal)] tracking-widest uppercase">TEAM_UNIT_01</span>
+            <span className="technical-label text-[var(--brand-metal)] tracking-widest uppercase">UNIDAD_EQUIPO_01</span>
           </div>
             <h2 className="text-foreground mb-6 text-4xl md:text-6xl uppercase font-black tracking-tight">Nuestro Equipo</h2>
             <p className="text-[var(--on-surface-muted)] text-lg max-w-2xl leading-relaxed">
@@ -89,7 +89,7 @@ export function TeamSection() {
             </p>
           </div>
           <div className="hidden md:block md:col-span-4 text-right">
-            <span className="technical-label text-accent font-bold text-xl">STAFF_UNIT.04</span>
+            <span className="technical-label text-accent font-bold text-xl">PERSONAL_TÉCNICO.04</span>
           </div>
         </div>
 
