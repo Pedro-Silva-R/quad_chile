@@ -34,7 +34,7 @@ export function RecentActivity() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-background relative">
+    <section className="py-16 md:py-32 bg-background relative">
       <div className="absolute inset-0 scanlines opacity-50 pointer-events-none"></div>
       <div className="relative max-w-[var(--container-max)] mx-auto px-[var(--edge-safe)] z-10">
         <div className="text-center md:text-right mb-12 md:grid md:grid-cols-12 gap-8 items-center">

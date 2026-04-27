@@ -72,7 +72,7 @@ export function TeamSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-surface-dim relative overflow-hidden">
+    <section className="py-16 md:py-32 bg-surface-dim relative overflow-hidden">
       {/* Background technical decoration */}
       <div className="absolute -top-24 -left-24 w-96 h-96 border-[40px] border-accent/5 rounded-full pointer-events-none"></div>
 

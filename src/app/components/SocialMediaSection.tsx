@@ -37,7 +37,7 @@ export function SocialMediaSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+    <section className="py-16 md:py-32 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-1/2 right-0 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none">
         <span className="font-display text-[15vw] font-black tracking-tighter vertical-text leading-none">

@@ -53,7 +53,7 @@ export function ClubsSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-surface-dim relative overflow-hidden">
+    <section className="py-16 md:py-32 bg-surface-dim relative overflow-hidden">
       <div className="max-w-[var(--container-max)] mx-auto px-[var(--edge-safe)] relative z-10">
         
         <div className="text-center md:text-left mb-12">

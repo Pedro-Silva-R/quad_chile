@@ -47,7 +47,7 @@ export function WhatIsSection() {
           </div>
           
           {/* Empty State / Balance Placeholder (Hidden on mobile) */}
-          <div className="hidden md:flex md:col-span-4 lg:col-span-5 items-center justify-center py-12">
+          <div className="hidden md:flex md:col-span-4 lg:col-span-5 items-center justify-center py-24">
             <div className="relative w-full aspect-[4/3] border-[3px] border-border overflow-hidden chamfer-card shadow-[var(--shadow-hard-sm)] group rotate-3 transition-transform hover:rotate-0 duration-300">
               <img 
                 src="/assets/1a.jpeg" 
