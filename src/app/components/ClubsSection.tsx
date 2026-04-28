@@ -84,7 +84,7 @@ export function ClubsSection() {
                   <img 
                     src="/assets/radar-map.webp" 
                     alt="Mapa de monitoreo nacional" 
-                    className="w-full h-full object-cover opacity-60 group-hover/map:opacity-100 group-hover/map:scale-110 transition-all duration-700"
+                    className="w-full h-full object-cover opacity-90 group-hover/map:opacity-100 group-hover/map:scale-110 transition-all duration-700"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                       e.currentTarget.parentElement?.classList.add('flex', 'items-center', 'justify-center', 'bg-border/5');

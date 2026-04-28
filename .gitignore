@@ -4,6 +4,7 @@ dist/
 dist-ssr/
 *.local
 .next/
+extras/
 
 # Logs
 *.log

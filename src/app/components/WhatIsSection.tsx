@@ -33,7 +33,7 @@ export function WhatIsSection() {
   ];
 
   return (
-    <section id="el-deporte" className="py-16 md:py-24 bg-surface-dim diagonal-section-top">
+    <section id="el-deporte" className="!py-16 md:!py-32 bg-surface-dim diagonal-section-top">
 
       <div className="max-w-[var(--container-max)] mx-auto px-[var(--edge-safe)] mt-8">
         <div className="text-center md:text-left mb-12 md:grid md:grid-cols-12 gap-8 items-center">

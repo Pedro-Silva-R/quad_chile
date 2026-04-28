@@ -1,12 +1,8 @@
+import { BrowserRouter, Routes, Route } from 'react-router';
 import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { WhatIsSection } from './components/WhatIsSection';
-import { RecentActivity } from './components/RecentActivity';
-import { TeamSection } from './components/TeamSection';
-import { ParticipateSection } from './components/ParticipateSection';
-import { ClubsSection } from './components/ClubsSection';
-import { SocialMediaSection } from './components/SocialMediaSection';
 import { Footer } from './components/Footer';
+import { Home } from './pages/Home';
+import { Sport } from './pages/Sport';
 
 /**
  * Design Rationale:
@@ -19,18 +15,17 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <Hero />
-        <WhatIsSection />
-        <RecentActivity />
-        <TeamSection />
-        <ParticipateSection />
-        <ClubsSection />
-        <SocialMediaSection />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen flex flex-col bg-background">
+        <Header />
+        <main className="flex-1 flex flex-col">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/el-deporte" element={<Sport />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }

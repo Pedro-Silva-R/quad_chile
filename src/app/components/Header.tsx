@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
+import { Link } from 'react-router';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,10 +57,12 @@ export function Header() {
   }, [isMenuOpen]);
 
   const navLinks = [
-    { label: 'Inicio', href: '#' },
-    { label: 'El Deporte', href: '#el-deporte' },
-    { label: 'Participa', href: '#participa' },
-    { label: 'Contacto', href: '#contacto' },
+    { label: 'Inicio', href: '/' },
+    { label: 'El Deporte', href: '/el-deporte' },
+    { label: 'Participa', href: '/participa' },
+    { label: 'Reglas', href: '/reglas' },
+    { label: 'Clasificación', href: '/clasificacion' },    
+    { label: 'Contacto', href: '/contacto' },
   ];
 
   return (
@@ -68,7 +71,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo & Status */}
           <div className="flex items-center gap-6">
-            <a href="#" className="flex items-center gap-3 group no-underline">
+            <Link to="/" className="flex items-center gap-3 group no-underline">
               <div className="w-10 h-10 border-2 border-border flex items-center justify-center overflow-hidden relative">
                 {/* Mobile / No-hover Logo */}
                 <img 
@@ -96,7 +99,7 @@ export function Header() {
                 <span className="font-display font-semibold text-foreground text-lg leading-none">Quad Rugby</span>
                 <span className="font-display text-[var(--brand-metal)] text-sm leading-none">Chile</span>
               </div>
-            </a>
+            </Link>
             <div className="hidden lg:flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
               <span className="technical-label text-primary">SYS.ON</span>
@@ -106,24 +109,24 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="text-foreground no-underline hover:underline font-semibold transition-all glitch-hover"
               >
                 <span className="glitch-text" data-text={link.label}>{link.label}</span>
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* Actions */}
           <div className="flex items-center gap-2">
-            <a
-              href="#participa"
+            <Link
+              to="/participa"
               className="hidden sm:inline-flex items-center justify-center px-6 py-2.5 bg-primary text-primary-foreground border-[3px] border-border shadow-[4px_4px_0_var(--border)] font-semibold no-underline transition-transform hover:-translate-x-1 hover:-translate-y-1 active:translate-x-0 active:translate-y-0 active:shadow-none"
             >
               Participa
-            </a>
+            </Link>
 
             {/* Theme Toggle */}
             <button
@@ -164,22 +167,22 @@ export function Header() {
         >
           <nav className="flex flex-col p-6 gap-2">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 onClick={() => setIsMenuOpen(false)}
                 className="px-4 py-3 border-2 border-border hover:bg-surface-dim text-foreground font-semibold no-underline transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#participa"
+            <Link
+              to="/participa"
               onClick={() => setIsMenuOpen(false)}
               className="mt-4 px-4 py-3 bg-primary text-primary-foreground border-[3px] border-border font-semibold text-center no-underline shadow-[4px_4px_0_var(--border)] transition-transform hover:-translate-x-1 hover:-translate-y-1"
             >
               Participa
-            </a>
+            </Link>
           </nav>
         </div>
       )}
