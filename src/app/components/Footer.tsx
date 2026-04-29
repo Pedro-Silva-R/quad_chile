@@ -29,8 +29,20 @@ export function Footer() {
           {/* Brand Column - Wide */}
           <div className="md:col-span-5">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-primary border-[3px] border-primary/50 flex items-center justify-center shadow-[4px_4px_0_rgba(255,0,0,0.3)]">
-                <span className="text-white font-display font-black text-xl">QR</span>
+              <div className="w-14 h-14 border-[3px] border-primary/50 flex items-center justify-center shadow-[4px_4px_0_rgba(255,0,0,0.3)] overflow-hidden relative">
+                <img 
+                  src="/assets/logo_og.webp" 
+                  alt="Quad Rugby Chile" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.classList.add('bg-primary');
+                    const span = document.createElement('span');
+                    span.className = 'text-white font-display font-black text-xl';
+                    span.innerText = 'QR';
+                    e.currentTarget.parentElement?.appendChild(span);
+                  }}
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-display font-black text-white text-xl leading-none uppercase tracking-tight">Quad Rugby</span>
@@ -120,11 +132,11 @@ export function Footer() {
           <p className="technical-label text-white/40 text-[9px] uppercase tracking-[0.2em] mb-6">Con el respaldo de</p>
           <div className="flex flex-col md:flex-row items-center gap-6 max-w-3xl mx-auto">
             {/* Logo placeholder: listo para <img src="/assets/federupa-logo.webp" ... /> */}
-            <div className="flex-shrink-0 w-20 h-20 border-[2px] border-white/20 bg-white/5 flex items-center justify-center chamfer-card group overflow-hidden">
+            <div className="flex-shrink-0 w-14 h-14 border-[2px] border-white/20 bg-white/5 flex items-center justify-center chamfer-card group overflow-hidden">
               <img 
-                src="/assets/federupa-logo.jpeg" 
+                src="/assets/federupa-logo.webp" 
                 alt="FEDERUPA Logo" 
-                className="w-full h-full object-contain p-2 opacity-50 group-hover:opacity-100 transition-opacity"
+                className="w-full h-full object-contain p-1 opacity-90 group-hover:opacity-100 transition-opacity"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                   e.currentTarget.parentElement?.classList.add('flex-col');
@@ -137,7 +149,7 @@ export function Footer() {
             </div>
             <div className="flex flex-col justify-center max-w-xl">
               <p className="text-white/60 text-xs leading-relaxed md:text-left">
-                <span className="text-white/80 font-semibold uppercase tracking-wider">Misión:</span> Fomentar el desarrollo del deporte paralímpico en Chile, promoviendo la inclusión y el alto rendimiento deportivo. <span className="text-white/80 font-semibold uppercase tracking-wider ml-2">Visión:</span> Ser referentes en Latinoamérica en deportes paralímpicos, formando atletas de clase mundial.
+                <span className="text-white/80 font-semibold uppercase tracking-wider">Misión:</span> Fomentar el desarrollo del rugby en silla de ruedas en Chile, promoviendo la inclusión y el alto rendimiento deportivo. <span className="text-white/80 font-semibold uppercase tracking-wider ml-2">Visión:</span> Ser referentes en Latinoamérica en el rugby en silla de ruedas, formando atletas de clase mundial.
               </p>
             </div>
           </div>
