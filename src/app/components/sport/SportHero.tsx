@@ -26,7 +26,7 @@ export function SportHero() {
 
           <h1 className="text-[var(--brand-white)] mb-6 font-display italic font-black uppercase tracking-tighter drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
             Quad rugby:<br/>
-            <span className="text-primary">velocidad</span>, impacto y estrategia.
+            <span className="text-primary">¿qué es?</span>
           </h1>
           
           <p className="text-[var(--brand-white)]/90 text-xl md:text-2xl max-w-2xl font-ui leading-relaxed mb-10 border-l-[3px] border-primary pl-6 drop-shadow-md">

@@ -3,6 +3,10 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { Sport } from './pages/Sport';
+import { Participate } from './pages/Participate';
+import { Rules } from './pages/Rules';
+import { Classification } from './pages/Classification';
+import { Contact } from './pages/Contact';
 
 /**
  * Design Rationale:
@@ -22,6 +26,10 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/el-deporte" element={<Sport />} />
+            <Route path="/participa" element={<Participate />} />
+            <Route path="/reglas" element={<Rules />} />
+            <Route path="/clasificacion" element={<Classification />} />
+            <Route path="/contacto" element={<Contact />} />
           </Routes>
         </main>
         <Footer />

@@ -1,10 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const location = useLocation();
+
+  const isParticipatePage = location.pathname === '/participa';
+  const ctaPath = isParticipatePage ? '/contacto' : '/participa';
+  const ctaLabel = isParticipatePage ? 'Contacto' : 'Participa';
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -122,10 +127,10 @@ export function Header() {
           {/* Actions */}
           <div className="flex items-center gap-2">
             <Link
-              to="/participa"
+              to={ctaPath}
               className="hidden sm:inline-flex items-center justify-center px-6 py-2.5 bg-primary text-primary-foreground border-[3px] border-border shadow-[4px_4px_0_var(--border)] font-semibold no-underline transition-transform hover:-translate-x-1 hover:-translate-y-1 active:translate-x-0 active:translate-y-0 active:shadow-none"
             >
-              Participa
+              {ctaLabel}
             </Link>
 
             {/* Theme Toggle */}
@@ -177,11 +182,11 @@ export function Header() {
               </Link>
             ))}
             <Link
-              to="/participa"
+              to={ctaPath}
               onClick={() => setIsMenuOpen(false)}
               className="mt-4 px-4 py-3 bg-primary text-primary-foreground border-[3px] border-border font-semibold text-center no-underline shadow-[4px_4px_0_var(--border)] transition-transform hover:-translate-x-1 hover:-translate-y-1"
             >
-              Participa
+              {ctaLabel}
             </Link>
           </nav>
         </div>

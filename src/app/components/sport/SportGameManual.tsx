@@ -23,7 +23,7 @@ export function SportGameManual() {
     {
       icon: Map,
       title: "La zona clave",
-      desc: "Al atacar, solo tres jugadores ofensivos pueden estar a la vez en la zona de gol (el “key”) y por un máximo de ocho segundos.",
+      desc: "Solo tres defensas pueden permanecer simultáneamente dentro de su zona al defender y un jugador ofensivo no puede permanecer dentro de la zona clave enemiga por más de ocho segundos.",
       num: "04"
     },
     {
