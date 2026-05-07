@@ -5,10 +5,10 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const navLinks = [
-    { label: 'Inicio', href: '#' },
-    { label: 'El Deporte', href: '#el-deporte' },
-    { label: 'Participa', href: '#participa' },
-    { label: 'Contacto', href: '#contacto' },
+    { label: 'Inicio', href: '/' },
+    { label: 'El Deporte', href: '/el-deporte' },
+    { label: 'Participa', href: '/participa' },
+    { label: 'Contacto', href: '/contacto' },
   ];
 
   const socialLinks = [
@@ -86,13 +86,13 @@ export function Footer() {
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-white/70 hover:text-white text-sm transition-colors font-medium flex items-center gap-2 group no-underline"
                   >
                     <span className="w-0 group-hover:w-3 h-[2px] bg-primary transition-all duration-200 flex-shrink-0"></span>
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

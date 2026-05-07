@@ -7,6 +7,8 @@ import { Participate } from './pages/Participate';
 import { Rules } from './pages/Rules';
 import { Classification } from './pages/Classification';
 import { Contact } from './pages/Contact';
+import { ScrollToTop } from './components/ScrollToTop';
+import { ScrollRestoration } from './components/ScrollRestoration';
 
 /**
  * Design Rationale:
@@ -20,6 +22,7 @@ import { Contact } from './pages/Contact';
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollRestoration />
       <div className="min-h-screen flex flex-col bg-background">
         <Header />
         <main className="flex-1 flex flex-col">
@@ -33,6 +36,7 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
+        <ScrollToTop />
       </div>
     </BrowserRouter>
   );
