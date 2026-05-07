@@ -1,4 +1,5 @@
 import { Zap, Users, Trophy, Globe } from 'lucide-react';
+import { Link } from 'react-router';
 
 export function WhatIsSection() {
   const features = [
@@ -96,18 +97,18 @@ export function WhatIsSection() {
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center">
-          <a
-            href="/reglas.html"
+          <Link
+            to="/reglas"
             className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground border-[3px] border-border shadow-[var(--shadow-hard-sm)] font-semibold no-underline transition-transform hover:-translate-x-1 hover:-translate-y-1 active:translate-x-0 active:translate-y-0 active:shadow-none chamfer-cut-tl"
           >
             Ver reglas
-          </a>
-          <a
-            href="/clasificacion.html"
+          </Link>
+          <Link
+            to="/clasificacion"
             className="inline-flex items-center justify-center px-6 py-3 bg-surface text-foreground border-[3px] border-border shadow-[var(--shadow-hard-sm)] font-semibold no-underline transition-transform hover:-translate-x-1 hover:-translate-y-1 active:translate-x-0 active:translate-y-0 active:shadow-none chamfer-cut-tl"
           >
             Entender clasificación
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { User, Heart, Flag, ClipboardCheck, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router';
 
 export function ParticipateSection() {
   const roles = [
@@ -151,12 +152,12 @@ export function ParticipateSection() {
               </p>
             </div>
             
-            <a
-              href="/participa.html"
+            <Link
+              to="/participa"
               className="group w-full md:w-auto inline-flex items-center justify-center px-10 py-6 bg-primary text-primary-foreground font-black text-xl tracking-widest uppercase transition-all hover:bg-white hover:text-primary active:scale-95 chamfer-cut-tl whitespace-nowrap border-[3px] border-transparent hover:border-primary"
             >
               UNIRME AHORA <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" />
-            </a>
+            </Link>
           </div>
         </div>
 

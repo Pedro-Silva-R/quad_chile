@@ -1,4 +1,5 @@
 import { Mail, Phone, Instagram, Youtube, Facebook, ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -181,12 +182,12 @@ export function Footer() {
           </div>
 
           <div className="flex gap-6">
-            <a href="/privacidad.html" className="text-white/50 hover:text-white/90 text-xs transition-colors font-medium">
+            <Link to="/privacidad" className="text-white/50 hover:text-white/90 text-xs transition-colors font-medium">
               Privacidad
-            </a>
-            <a href="/terminos.html" className="text-white/50 hover:text-white/90 text-xs transition-colors font-medium">
+            </Link>
+            <Link to="/terminos" className="text-white/50 hover:text-white/90 text-xs transition-colors font-medium">
               Términos
-            </a>
+            </Link>
           </div>
         </div>
 
